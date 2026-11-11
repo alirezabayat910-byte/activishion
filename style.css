@@ -1,0 +1,349 @@
+/* ===== تنظیمات پایه ===== */
+:root {
+    --bg-color: #0f0f1a;
+    --card-bg: #1a1a2e;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0b0;
+    --accent-color: #e94560;
+    --accent-hover: #ff6b81;
+    --border-color: #2a2a40;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== هدر ===== */
+.site-header {
+    background-color: rgba(15, 15, 26, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav a {
+    color: var(--text-secondary);
+    font-weight: 400;
+    transition: color 0.3s;
+    padding-bottom: 5px;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.tg-btn {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tg-btn:hover {
+    background-color: var(--accent-hover);
+}
+
+/* ===== بخش قهرمان ===== */
+.hero-section {
+    padding: 30px 0;
+}
+
+.hero-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 400px;
+}
+
+.hero-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.hero-content {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 40px;
+    background: linear-gradient(transparent, rgba(15, 15, 26, 0.95));
+}
+
+.category-badge {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.category-badge.small {
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+.read-more {
+    color: var(--accent-color);
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.read-more:hover {
+    color: var(--accent-hover);
+}
+
+/* ===== بخش اصلی (شبکه اخبار + سایدبار) ===== */
+.main-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+    padding: 20px 0 50px;
+}
+
+.section-title {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    border-right: 4px solid var(--accent-color);
+    padding-right: 15px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.news-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(233, 69, 96, 0.1);
+}
+
+.news-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+.card-body a {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* ===== نوار کناری ===== */
+.sidebar .widget {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar .widget h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.popular-list li,
+.category-list li {
+    margin-bottom: 10px;
+}
+
+.popular-list a,
+.category-list a {
+    color: var(--text-secondary);
+    transition: color 0.3s;
+    font-size: 0.9rem;
+}
+
+.popular-list a:hover,
+.category-list a:hover {
+    color: var(--accent-color);
+}
+
+.tg-widget p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+.tg-join-btn {
+    display: block;
+    text-align: center;
+    background-color: #0088cc;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.tg-join-btn:hover {
+    background-color: #00aaff;
+}
+
+/* ===== فوتر ===== */
+.site-footer {
+    background-color: #0a0a12;
+    border-top: 1px solid var(--border-color);
+    padding: 40px 0 0;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding-bottom: 30px;
+}
+
+.footer-col h4 {
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+.footer-col p,
+.footer-col a {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* ===== ریسپانسیو ===== */
+@media (max-width: 992px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+    .hero-card {
+        height: 300px;
+    }
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-inner {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px 0;
+        gap: 15px;
+    }
+    .main-nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .hero-content {
+        padding: 20px;
+    }
+    .hero-card {
+        height: 250px;
+    }
+}
